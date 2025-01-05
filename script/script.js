@@ -43,7 +43,7 @@ function makeGuess() {
     }
 
     guessInput.value = '';
-    console.log(answer); //the correct answer
+    console.log(`Correct Answer: ${answer}`); //the correct answer
 }
 
 function setupRestartButton() {
