@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    overflow: hidden;
+    font-size: 1.2rem;
+    animation: backgroundAnimation 10s infinite alternate;
+}
+
+.game-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+input {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: none;
+    width: 80%;
+    margin-top: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid #ff6f61;
+    box-shadow: 0 0 5px rgba(255, 111, 97, 0.8);
+}
+
+.guess-button {
+    background-color: #2fa429;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.guess-button:hover {
+    background-color: #268126;
+    transform: translateY(-3px);
+}
+
+.guess-button:active {
+    transform: translateY(2px);
+}
+
+.result {
+    margin-top: 30px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.error {
+    margin-top: 10px;
+    color: #ff4d4d;
+    font-size: 1.1rem;
+}
+
+#restart-button {
+    padding: 12px 24px; 
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px;
+    display: none;
+    width: 100%;
+    max-width: 200px; 
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+#restart-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+#restart-button:active {
+    background-color: #388e3c;
+    transform: scale(1);
+}
+
+
+
+.game-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    input, button {
+        width: 90%;
+    }
+
+    .game-container {
+        padding: 20px;
+    }
+}
